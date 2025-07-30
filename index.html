@@ -1,16 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Prateek's Blogs</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Prateek Solanki</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Matrix Rain Canvas -->
   <canvas id="matrix"></canvas>
-  <div class="content">
-    <h1>Welcome!</h1>
-    <p>This is my space where you can find information about me.</p>
+
+  <!-- Loading Overlay -->
+  <div id="loading-overlay" style="display:none;">
+    <div class="spinner">
+      <div class="globe"></div>
+      <div class="loading-text">Loading<span class="dots"></span></div>
+    </div>
   </div>
+
+  <!-- Content Overlay (Modal) -->
+  <div id="content-overlay" class="overlay" style="display:none;">
+    <div class="overlay-content">
+      <button id="close-overlay" class="close-btn" aria-label="Close overlay">&times;</button>
+      <div id="overlay-text"><!-- Dynamic content goes here --></div>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <header>
+      <h1 style="color: #68f668;">Prateek Solanki</h1>
+      <p class="tagline">Engineer | Blogger | Tech Enthusiast</p>
+      <nav>
+        <button class="open-overlay-btn" data-content="
+          <h2>About Me</h2>
+          <p>I'm an engineering professional passionate about technology, software, and digital innovation. This site is my digital home, where I share my projects, ideas, and reflections on tech and life.</p>
+        ">About</button>
+        <button class="open-overlay-btn" data-content="
+          <h2>Blog</h2>
+          <article>
+            <h3>How I Built This Site</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac dictum dui. <a href='#'>Read More</a></p>
+          </article>
+          <article>
+            <h3>My Favorite Coding Resources</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur nibh sit amet purus convallis. <a href='#'>Read More</a></p>
+          </article>
+        ">Blog</button>
+        <button class="open-overlay-btn" data-content="
+          <h2>Projects</h2>
+          <ul>
+            <li><strong>Matrix Rain Web</strong> — A personal website with a dynamic Matrix-themed background.</li>
+            <li><strong>Portfolio Dashboard</strong> — An interactive dashboard to showcase coding and writing projects.</li>
+            <li><strong>GitHub Contributions Visualizer</strong> — Tool to visualize GitHub activity.</li>
+          </ul>
+        ">Projects</button>
+        <button class="open-overlay-btn" data-content="
+          <h2>Contact</h2>
+          <ul>
+            <li>Email: <a href='mailto:prateek.solanki9@gmail.com'>prateek.solanki9@gmail.com</a></li>
+            <li>LinkedIn: <a href=https://www.linkedin.com/in/prateeksolanki/>prateeksolanki</a></li>
+            <li>GitHub: <a href='https://github.com/pks-eng'>pks-eng</a></li>
+          </ul>
+        ">Contact</button>
+      </nav>
+    </header>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Prateek Solanki | Built with <span style="color:#0F0;">&#9829;</span> & Passion</p>
+  </footer>
+
   <script src="matrix.js"></script>
 </body>
 </html>
