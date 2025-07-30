@@ -1,0 +1,18 @@
+html, body {
+  height: 100%; margin: 0; padding: 0; background: #000; overflow: hidden;
+}
+#matrix {
+  position: fixed;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  display: block;
+  z-index: 0;
+  background: #000;
+}
+.content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-family: monospace;
+  padding: 2rem;
+}
